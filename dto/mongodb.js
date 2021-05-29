@@ -40,25 +40,3 @@ module.exports.insert = async(collectionName, item) => {
     throw e;
   }
 };
-
-module.exports.update = async(collectionName, filter, obj) => {
-  try {
-    const db = await connect();
-    const collection = await db.collection(collectionName);
-    const result = await collection.updateOne(filter, obj, { upsert: true });
-    return result;
-  } catch (e) { 
-    throw e;
-  }
-};
-
-module.exports.remove = async(collectionName, item) => {
-  try {
-    const db = await connect();
-    const collection = await db.collection(collectionName);
-    const result = await collection.delete(item);
-    return result;
-  } catch (e) { 
-    throw e;
-  }
-};
