@@ -1,3 +1,5 @@
+const model = require('./dto/livros');
+
 const livros = [
   {
     autor: 'J. K. Rowling',
@@ -19,7 +21,8 @@ const livros = [
   }
 ];
 
-const vetor = [129, 139, 155, 176];
+
+// const vetor = [129, 139, 155, 176];
 
 
 // encontra o maior numero
@@ -50,4 +53,4 @@ const vetor = [129, 139, 155, 176];
 //encontra a media das notas dos livros
 // const resultado = livros.reduce((soma, valAtual) => soma + valAtual.nota, 0) / livros.length;
 
-console.log(resultado); 
+// console.log(resultado); 

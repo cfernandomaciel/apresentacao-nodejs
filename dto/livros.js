@@ -14,13 +14,6 @@ module.exports.find = async(filtro) => {
 
 
 module.exports.save = async(objeto) => {
-
-};
-
-module.exports.update = async(atributo) => {
-
-};
-
-module.exports.delete = async(id) => {
-
+  const resultado = await db.insert(collection, objeto);
+  return resultado;
 };
